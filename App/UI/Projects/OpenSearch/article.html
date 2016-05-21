@@ -1,0 +1,15 @@
+<div ng-if="article.loading" class="progressFull">
+  <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+</div>
+
+<md-content ng-show="article.content">
+  <section>
+    <md-subheader class="md-primary">
+      <md-button class="md-icon-button md-primarty">
+        <md-icon class="material-icons" ui-sref="home.openSearch">search</md-icon>
+      </md-button>
+      {{ article.title }}
+    </md-subheader>
+    <div ng-bind-html="article.text" class="md-padding md-margin articleContent"></div>
+  </section>
+</md-content>

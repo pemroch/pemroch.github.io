@@ -1,0 +1,13 @@
+<md-autocomplete
+                 md-selected-item = "openSearch.selected"
+                 md-search-text = "openSearch.searchTitle"
+                 md-selected-item-change = "openSearch.articleSelected()"
+                 md-autoselect = false
+                 md-select-on-match = false
+                 md-items = "title in openSearch.articles( openSearch.searchTitle )"
+                 md-item-text = "title"
+                 md-match-case-insensitive = true
+                 placeholder = "Search Wikipedia Articles"
+                 md-autofocus>
+  <md-item-template>{{ title }}</md-item-template>
+</md-autocomplete>

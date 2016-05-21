@@ -1,0 +1,22 @@
+.md-subheader-inner {
+  padding: 0px !important;
+}
+articleContent a {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;  
+  color: black;
+}
+.progressFull {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.progressFull > md-progress-circular {
+  left: 50%;
+  top: 50%;
+}
+
+.mw-editsection, .reference {
+  display: none;
+}

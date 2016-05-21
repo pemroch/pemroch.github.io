@@ -1,0 +1,8 @@
+<md-content>
+  <md-list>
+    <md-list-item ng-repeat="name in qrCodeToJSPDF.names" ng-click="qrCodeToJSPDF.generateQrCodePdf( name )">
+      <p>{{ name.fName }} {{ name.lName }}</p>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>

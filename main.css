@@ -16,7 +16,9 @@ articleContent a {
   left: 50%;
   top: 50%;
 }
-
 .mw-editsection, .reference {
   display: none;
+}
+p a {
+  text-decoration: none;
 }

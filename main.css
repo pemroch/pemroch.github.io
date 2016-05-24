@@ -1,7 +1,7 @@
 .md-subheader-inner {
   padding: 0px !important;
 }
-articleContent a {
+#articleContent a {
   text-decoration: none;
   pointer-events: none;
   cursor: default;  
@@ -17,8 +17,14 @@ articleContent a {
   top: 50%;
 }
 .mw-editsection, .reference {
-  display: none;
+  display: none !important;
 }
 p a {
   text-decoration: none;
+}
+#skillsList a {
+  text-decoration: none;
+}
+.projectsLinks md-list-item a{
+  font-weight: 400 !important;
 }

@@ -33,6 +33,17 @@
       }
     })
     
+    // Skills UI
+      .state( 'home.skills', {
+      url: '/skills',
+      views: {
+        'home': {
+          templateUrl: 'App/UI/Skills/skills.html',
+          controller: 'SkillsCtrl as skills'          
+        }
+      }
+    })
+    
     // Projects UI
       .state( 'home.projects', {
       url: '/projects',

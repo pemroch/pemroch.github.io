@@ -10,6 +10,7 @@
     'app.config',
     'home.controllers',
     'aboutMe.controllers',
+    'skills.controllers',
     'projects.controllers',
     'contact.controllers'
   ])

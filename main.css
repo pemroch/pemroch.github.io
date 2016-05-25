@@ -28,3 +28,7 @@ p a {
 .projectsLinks md-list-item a{
   font-weight: 400 !important;
 }
+.active {
+  border-bottom: 1px solid rgb( 255, 64, 129 );
+  border-radius: 0;
+}

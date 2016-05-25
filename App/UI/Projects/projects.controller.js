@@ -5,11 +5,20 @@
   angular.module( 'projects.controller', [] )
     .controller( 'ProjectsCtrl', ProjectsCtrl );
   
-  ProjectsCtrl.$inject = [];
+  ProjectsCtrl.$inject = [
+    '$scope'
+  ];
   
-  function ProjectsCtrl() {
+  function ProjectsCtrl( $scope ) {
     
     var vm = this;
+    
+    $scope.$emit( 'active', {
+      aboutMe: false,
+      skills: false,
+      projects: true,
+      contact: false,
+    } );      
     
   }
   

@@ -2,10 +2,10 @@
   <div class="md-toolbar-tools">
     <h1 class="title">Pedro Rocha</h1>
     <span flex></span>
-    <md-button ui-sref="home.aboutMe">About Me</md-button>
-    <md-button ui-sref="home.skills">Skills</md-button>
-    <md-button ui-sref="home.projects">Projects</md-button>
-    <md-button ui-sref="home.contact">Contact</md-button>
+    <md-button ng-class="{ active: home.aboutMe }" ui-sref="home.aboutMe">About Me</md-button>
+    <md-button ng-class="{ active: home.skills }" ui-sref="home.skills">Skills</md-button>
+    <md-button ng-class="{ active: home.projects }" ui-sref="home.projects">Projects</md-button>
+    <md-button ng-class="{ active: home.contact }" ui-sref="home.contact">Contact</md-button>
   </div>
 </md-toolbar>
 <ui-view name="home" layout="column" flex></ui-view>

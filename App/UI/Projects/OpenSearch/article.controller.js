@@ -8,10 +8,11 @@
   ArticleCtrl.$inject = [
     '$http',
     '$stateParams',
+    '$scope',
     '$timeout'
   ];
   
-  function ArticleCtrl( $http, $stateParams, $timeout ) {
+  function ArticleCtrl( $http, $stateParams, $scope, $timeout ) {
     
     var vm = this;
     
@@ -50,6 +51,7 @@
       // Shows the content.
       vm.content = true;      
     }
+    $scope.$emit( 'backButton', true );
     
   }
   

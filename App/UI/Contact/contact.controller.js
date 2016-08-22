@@ -20,6 +20,8 @@
       contact: true,
     } );    
     
+    $scope.$emit( 'backButton', false );
+
   }
   
 })();

@@ -32,3 +32,36 @@ p a {
   border-bottom: 1px solid rgb( 255, 64, 129 );
   border-radius: 0;
 }
+.schedule-row {
+    border-bottom: 1px solid;
+}
+.schedule-row:first-child {
+    border-top: 1px solid;
+}
+.schedule-row div, .schedule-row span {
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;    
+    border-left: 1px solid;
+    text-align: center;
+}
+.schedule-row div {
+    cursor: pointer;
+}
+.schedule-row div:hover {
+    background: #ccc;
+}
+.schedule-row div:last-child {
+    border-right: 1px solid;
+}
+.schedule-header {
+    background: #ddd;
+}
+.schedule-header div {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 10px;
+    overflow: auto;    
+    font-weight: 600;
+}

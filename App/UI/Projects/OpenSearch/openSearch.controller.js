@@ -8,10 +8,11 @@
   OpenSearchCtrl.$inject = [
     '$http',
     '$state',
+    '$scope',
     '$timeout'
   ];
   
-  function OpenSearchCtrl( $http, $state, $timeout ) {
+  function OpenSearchCtrl( $http, $state, $scope, $timeout ) {
     
     var vm = this;
     
@@ -43,6 +44,7 @@
         })
       }
     }
+    $scope.$emit( 'backButton', true );
     
   }
 

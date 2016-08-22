@@ -12,6 +12,14 @@
   
   function Config( $stateProvider, $urlRouterProvider ) { 
     
+    var config = {
+        apiKey: "AIzaSyDzg4bg0oc3-mTF73bpTklJVh6C0S1G4Nc",
+        authDomain: "pemroch-140917.firebaseapp.com",
+        databaseURL: "https://pemroch-140917.firebaseio.com",
+        storageBucket: "pemroch-140917.appspot.com",
+    };
+    firebase.initializeApp(config);
+
     $stateProvider
     
     // Home UI
@@ -84,6 +92,28 @@
         'home': {      
           templateUrl: 'App/UI/Projects/QrCodeToJSPDF/qrCodeToJSPDF.html',
           controller: 'QrCodeToJSPDFCtrl as qrCodeToJSPDF'
+        }
+      }
+    })
+    
+    // Google Sheets Login UI
+      .state( 'home.login', {
+      url: '/login',
+      views: {
+        'home': {      
+          templateUrl: 'App/UI/Projects/GoogleSheets/login.html',
+          controller: 'LoginCtrl as login'
+        }
+      }
+    })
+
+    // Google Sheets Sheet UI
+      .state( 'home.sheet', {
+      url: '/sheet',
+      views: {
+        'home': {      
+          templateUrl: 'App/UI/Projects/GoogleSheets/sheet.html',
+          controller: 'SheetCtrl as sheet'
         }
       }
     })

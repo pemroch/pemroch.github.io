@@ -19,7 +19,9 @@
       projects: false,
       contact: false,
     } );    
-    
+
+   $scope.$emit( 'backButton', false );
+
   }
   
 })();

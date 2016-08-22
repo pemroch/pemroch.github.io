@@ -3,6 +3,7 @@
   'use strict';
 
   angular.module( 'PemRoch', [ 
+    'firebase',     
     'ui.router', 
     'ngMaterial',
     'ngSanitize',

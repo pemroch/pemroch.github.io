@@ -1,0 +1,63 @@
+<div layout="row" flex>
+    <div layout="column" flex="40">
+        <div layout="row" layout-align="center center" class="md-padding md-margin">
+            <!--Displays our dates in a drop down menu-->
+            <md-input-container flex="25">
+                <label>Date</label>
+                <md-select ng-model="sheet.setDate">
+                    <md-option ng-repeat="day in sheet.days" ng-value="sheet.dates[$index]">
+                        {{ day + ' ' + sheet.dates[$index] }}
+                    </md-option>
+                </md-select>
+            </md-input-container>    
+            <span flex="5"></span>
+            <!--Displays our times in a drop down menu-->
+            <md-input-container flex="20">
+                <label>Time</label>
+                <md-select ng-model="sheet.setTime">
+                    <md-option ng-repeat="time in sheet.times" ng-value="time[0]">
+                        {{ time[0] }}
+                    </md-option>
+                </md-select>
+            </md-input-container>    
+            <span flex="5"></span>
+            <!--Displays our employee names in a drop down menu-->
+            <md-input-container flex="20">
+                <label>Employee</label>
+                <md-select ng-model="sheet.setEmployee">
+                    <md-option ng-repeat="employee in sheet.employees" ng-value="employee[0]">
+                        {{ employee[0] }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <span flex="5"></span>
+            <md-button ng-click="sheet.saveSchedule()" ng-disabled="!sheet.setTime && !sheet.setDate" class="md-primary md-raised">Save</md-button>
+        </div>
+        <div layout="row" layout-align="center center" class="md-padding">
+            Select cell below to update values.
+        </div>
+        <md-divider></md-divider>
+        <div ng-if="!sheet.loading" class="md-padding">
+            <div layout="row" class="schedule-row schedule-header">
+                <span flex="10"></span>
+                <!--Displays our day and date in the top row of the table-->
+                <div ng-repeat="day in sheet.days" flex>
+                    {{ day }}
+                    <br>
+                    {{ sheet.dates[$index] }}
+                </div>
+            </div>
+            <!--Iterates through our list of times available iand displays them in the left hand column-->
+            <!--then iterates through 'newRows' array created to display either a name or an empty string-->
+            <div ng-repeat="time in sheet.times" ng-init="time.index = $index" layout="row" class="schedule-row">
+                <span flex="10">{{ time[0] }}</span>
+                <!--Iterates through our 'newRows' array to display our rows of columns created-->
+                <div ng-repeat="employee in sheet.schedule[$index] track by $index" ng-click="sheet.setEmployee = employee; sheet.setTime = time[0]; sheet.setDate = sheet.dates[$index]; sheet.saveRow = time.index; sheet.saveColumn = $index" flex>
+                    {{ employee }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Dislplays our spreadsheet on the right side of the screen-->
+    <iframe src="https://docs.google.com/spreadsheets/d/1-hMUEsrl9cykc6-fgjG96c0wac7Y-VYAfyrflzZPSqc/edit#gid=0" flex="60"></iframe>
+</div>

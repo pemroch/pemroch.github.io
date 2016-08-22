@@ -1,5 +1,8 @@
 <md-toolbar>
   <div class="md-toolbar-tools">
+    <md-button ng-if="home.backButton" ui-sref="home.projects" class="md-icon-button">
+      <md-icon class="material-icons">arrow_back</md-icon>
+    </md-button>
     <h1 class="title">Pedro Rocha</h1>
     <span flex></span>
     <md-button ng-class="{ active: home.aboutMe }" ui-sref="home.aboutMe">About Me</md-button>

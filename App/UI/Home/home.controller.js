@@ -17,11 +17,15 @@
     vm.skills = false;
     vm.projects = false;
     vm.contact = false;
+    vm.backButton = false;
     
     $scope.$on( 'active', function( e, data ) {
       angular.forEach( data, function( value, key ) {
         vm[ key ] = value;
       })
+    } );
+    $scope.$on( 'backButton', function( e, data ) {
+      vm.backButton = data;
     } );
     
   }

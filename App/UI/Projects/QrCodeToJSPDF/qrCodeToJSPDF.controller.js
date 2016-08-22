@@ -5,9 +5,9 @@
   angular.module( 'qrCodeToJSPDF.controller', [] )
     .controller( 'QrCodeToJSPDFCtrl', QrCodeToJSPDFCtrl );
   
-  QrCodeToJSPDFCtrl.$inject = [ '$timeout' ];
+  QrCodeToJSPDFCtrl.$inject = [ '$scope', '$timeout' ];
   
-  function QrCodeToJSPDFCtrl( $timeout ) {
+  function QrCodeToJSPDFCtrl( $scope, $timeout ) {
     
     var vm = this;
     
@@ -60,6 +60,7 @@
         doc.output( 'datauri' );
       }, 200 );
     } 
+    $scope.$emit( 'backButton', true );
     
   };
   

@@ -6,7 +6,9 @@
     'projects.controller',
     'openSearch.controller',
     'article.controller',
-    'qrCodeToJSPDF.controller'
+    'qrCodeToJSPDF.controller',
+    'login.controller',
+    'sheet.controller'
   ])
 
 })();

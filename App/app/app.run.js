@@ -6,10 +6,13 @@
   .run( RunBlock )
 
   RunBlock.$inject = [ 
+    '$firebaseAuth', 
     '$rootScope', 
     '$state'
   ];
 
-  function RunBlock( $firebaseAuth, $rootScope, $state ) {}
+  function RunBlock( $firebaseAuth, $rootScope, $state ) {
+    $rootScope.token = null;
+  }
   
 })();

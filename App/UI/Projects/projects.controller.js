@@ -18,7 +18,9 @@
       skills: false,
       projects: true,
       contact: false,
-    } );      
+    } );
+
+    $scope.$emit( 'backButton', false );
     
   }
   

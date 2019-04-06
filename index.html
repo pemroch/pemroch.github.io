@@ -1,59 +1,140 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.4/angular-material.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css">
-  
-  </head>
-  
-  <body ng-app="PemRoch">
-    
-    <ui-view layout="column" layout-fill></ui-view>
-    
-    <!-- Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-sanitize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<!doctype html>
+<html lang="en" style="margin: 0px;">
+    <head>
+        <meta charset="utf-8">
+        <title>Click Wik</title>
 
-    <script src="jspdf.js"></script>
-    <script src="qr.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            a:hover {
+                background: #eee;
+            }
+        </style>
+    </head>
+
+    <body style="margin: 0px;">
+        <div
+            style="
+                letter-spacing: 1px;
+                margin-bottom: 24px;
+                background: #3F51B5;
+                color: white;
+                height: 64px;
+                display: flex;
+                place-items: center;
+                padding-left: 16px;
+                font-family: Roboto,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif
+            "
+            class="mat-body-2"
+        >
+            Click Wik
+        </div>
+
+        <div style="padding: 16px; font-family: Roboto,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif">
+            <span style="letter-spacing: 1px; font-weight: 600">Description</span>
+            <hr>
     
-    <!-- app -->
-    <script src="App/app/app.config.js"></script>
-    <script src="App/app/app.js"></script>
-    <script src="App/app/app.run.js"></script>
-    
-    <!-- Modules -->
-    <script src="App/Modules/Home/home.controllers.js"></script>
-    <script src="App/Modules/AboutMe/aboutMe.controllers.js"></script>
-    <script src="App/Modules/Skills/skills.controllers.js"></script>
-    <script src="App/Modules/Projects/projects.controllers.js"></script>
-    <script src="App/Modules/Contact/contact.controllers.js"></script>
-    
-    <!-- Controllers -->
-    <script src="App/UI/Home/home.controller.js"></script>
-    <script src="App/UI/AboutMe/aboutMe.controller.js"></script>
-    <script src="App/UI/Skills/skills.controller.js"></script>
-    <script src="App/UI/Projects/projects.controller.js"></script>
-    <script src="App/UI/Projects/OpenSearch/openSearch.controller.js"></script>
-    <script src="App/UI/Projects/OpenSearch/article.controller.js"></script>
-    <script src="App/UI/Projects/QrCodeToJSPDF/qrCodeToJSPDF.controller.js"></script>
-    <script src="App/UI/Projects/GoogleSheets/login.controller.js"></script>
-    <script src="App/UI/Projects/GoogleSheets/sheet.controller.js"></script>
-    <script src="App/UI/Contact/contact.controller.js"></script>
-    
-    <!-- Services -->
-    
-  </body>
-  
+            <p style="padding: 16px 0px; margin-bottom: 24px;">
+                Wikipedia articles displayed in containers that can be saved into a designated group named by the user.
+                Each group is displayed in the "Folders" tab where the user can review previously saved paragraphs.
+            </p>
+
+            <span style="letter-spacing: 1px; font-weight: 600">Technologies</span>
+            <hr>
+
+            <ul
+                style="
+                    list-style-type: none;
+                    flex-wrap: wrap;
+                    padding: 0px;
+                    display: flex;
+                    margin: 24px 0px;
+                "
+            >
+                <li>
+                    <img src="assets/angular.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/react.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/firebase.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/ionic.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/react-native.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/redux.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/flux.png" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/material-ui.jpg" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+                <li>
+                    <img src="assets/angular material.jpg" height="40px" style="margin-right: 16px; margin-bottom: 16px;"/>
+                </li>
+            </ul>
+
+            <span style="letter-spacing: 1px; font-weight: 600">Demos</span>
+            <hr>
+
+            <ul style="list-style-type: none; padding: 0px;">
+                <li>
+                    <a
+                        href="angular"
+                        style="
+                            display: flex;
+                            place-items: center;
+                            padding: 24px 16px;
+                            border-bottom: 1px solid #ddd;
+                            text-decoration: none;
+                            color: #3F51B5;
+                            font-weight: 400;
+                        "
+                    >
+                        <span>Angular</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="react-flux"
+                        style="
+                            display: flex;
+                            place-items: center;
+                            padding: 24px 16px;
+                            border-bottom: 1px solid #ddd;
+                            text-decoration: none;
+                            color: #3F51B5;
+                            font-weight: 400;
+                        "
+                    >
+                        <span>React + Flux</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="react-redux"
+                        style="
+                            display: flex;
+                            place-items: center;
+                            padding: 24px 16px;
+                            border-bottom: 1px solid #ddd;
+                            text-decoration: none;
+                            color: #3F51B5;
+                            font-weight: 400;
+                        "
+                    >
+                        <span>React + Redux</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
 </html>
